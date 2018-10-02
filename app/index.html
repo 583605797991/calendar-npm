@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/bulma.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="left-menu">
+            <div class="mini-calendar">
+              <div class="mini-header">
+                Outubro de 2018 
+                <a class="button is-white">
+                  <i class="fas fa-angle-left"></i>
+                </a>
+                <a class="button is-white">
+                    <i class="fas fa-angle-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="my-agendas">
+                <div class="field is-grouped">
+                    <p class="control is-expanded">
+                      <input class="input" type="text" placeholder="Adicionar outras agendas">
+                    </p>
+                    <p class="control">
+                        <a class="button is-white"><i class="fas fa-plus"></i></a>  
+                    </p>
+                </div>
+
+                <div class="dropdown">
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span>Minhas agendas</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-up" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item">
+                        Dropdown item
+                      </a>
+                      <a class="dropdown-item">
+                        Other dropdown item
+                      </a>
+                      <a href="#" class="dropdown-item is-active">
+                        Active dropdown item
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Other dropdown item
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a href="#" class="dropdown-item">
+                        With a divider
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+
+            <div class="other-agendas">
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>Outras agendas</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-up" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">
+                      Dropdown item
+                    </a>
+                    <a class="dropdown-item">
+                      Other dropdown item
+                    </a>
+                    <a href="#" class="dropdown-item is-active">
+                      Active dropdown item
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Other dropdown item
+                    </a>
+                    <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item">
+                      With a divider
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
