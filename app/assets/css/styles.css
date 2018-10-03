@@ -27,3 +27,53 @@
   border-color: #000 transparent transparent;
   margin-left: 16px;
 }
+
+#menu {
+  width: 255px;;
+  max-height: 885px;
+  overflow: hidden;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+#calendar {
+  width: 85%;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+#more {
+  width: 3%;
+  max-height: 885px;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.fc-toolbar {
+  display: none;
+}
+
+.fc-day-header{
+  font-size: xx-large;
+  font-weight: lighter;
+}
+
+.fc-axis > span {
+  font-size: smaller;
+  margin-right: 8px;
+}
+
+.more-icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.more-button {
+  background: transparent;
+  border: none;
+  outline: none;
+}

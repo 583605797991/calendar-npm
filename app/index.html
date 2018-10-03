@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,8 +9,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/helpers.css">
+  <link rel='stylesheet' href='assets/css/fullcalendar.css' />
+  <script src='assets/js/jquery.min.js'></script>
+  <script src='assets/js/moment.min.js'></script>
+  <script src='assets/js/fullcalendar.js'></script>
+  <script src='assets/js/app.js'></script>
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 </head>
+
 <body>
   <nav class="navbar card" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -89,5 +96,20 @@
       </div>
     </div>
   </nav>
+
+  <section id="bottom">
+    <div class="columns">
+      <div id="menu">
+        MENU
+      </div>
+      <div id="calendar"></div>
+      <div id="more">
+        <button class="more-button"><img class="more-icon" src="https://www.gstatic.com/companion/icon_assets/keep_2x.png"></button>
+        <button class="more-button"><img class="more-icon" src="https://www.gstatic.com/companion/icon_assets/tasks2_2x.png"></button>
+        <button class="more-button"><img class="more-icon" src="https://github.com/thiagopaiva99/google-calendar-clone/blob/master/app/assets/images/plus.png"></button>
+      </div>
+    </div>
+  </section>
 </body>
+
 </html>
