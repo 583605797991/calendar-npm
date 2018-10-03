@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Calendar Clone</title>
+  <link rel="icon" id="favicon" type="image/x-icon" href="https://calendar.google.com/googlecalendar/images/favicon_v2014_3.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/helpers.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+</head>
+<body>
+  <nav class="navbar card" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <div class="hamburger center">
+          <svg class="is-shaded" viewBox="0 0 24 24">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="navbar-item is-paddingless">
+        <img class="brand-img" alt="" aria-hidden="true" src="https://www.gstatic.com/images/branding/product/1x/calendar_48dp.png">
+        <span class="subtitle is-5 is-shaded has-text-black">Calendar</span>
+      </div>
+    </div>
+    <div class="navbar-menu">
+      <div class="container">
+        <div class="columns center is-mobile is-marginless">
+          <div class="column left is-8">
+            <div class="columns is-mobile">
+              <div class="column center is-paddingless is-narrow">
+                <a class="button is-light is-uppercase">Today</a>
+              </div>
+              <div class="column center is-paddingless is-narrow">
+                <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">&lt;</a>
+              </div>
+              <div class="column center is-paddingless is-narrow">
+                <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">&gt;</a>
+              </div>
+              <div class="column left">
+                <p class="is-shaded has-text-black subtitle is-5">
+                  <time>October 2018</time>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="column right">
+            <div class="columns is-mobile">
+              <div class="column is-narrow">
+                <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">
+                  <i class="fas fa-search"></i>
+                </a>
+              </div>
+              <div class="column is-narrow">
+                <a class="button is-light">
+                  <span>Day</span>
+                  <span class="calendar-view"></span>
+                </a>
+              </div>
+              <div class="column is-narrow">
+                <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">
+                  <i class="fas fa-cog icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns left is-mobile is-marginless">
+        <div class="column center is-paddingless is-narrow">
+          <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">
+            <i class="fas fa-th"></i>
+          </a>
+        </div>
+        <div class="column center is-narrow">
+          <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">
+            <i class="fas fa-bell"></i>
+          </a>
+        </div>
+        <div class="column center is-narrow">
+          <figure class="image is-32x32">
+            <a>
+              <img class="is-rounded" src="assets/images/goku.jpg" alt="">
+            </a>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </nav>
+</body>
+</html>
