@@ -64,36 +64,66 @@
     text-align: right !important;
 }
 
-.my-agendas {
-    height: 300px;
-    border-bottom: #e0e0e0 1px solid;
+.my-agendas, .other-agendas {
     padding: 10px 10px 0 15px;
+    color: grey;
 }
+
+.my-agendas {
+    border-bottom: #e0e0e0 1px solid;
+
+}
+
+.input {
+    border: none !important;
+    box-shadow: none !important;
+    background: #ededed !important;
+    width: 199px !important;
+}
+
+.input::placeholder {
+    font-size: 90%;
+    color: #222 !important;
+  }
 
 .is-white {
     border-radius: 50% !important;
+    margin-left: -12px;
+    color: grey !important;
 }
 
-.my-calendars {
+.my-calendars, .other-calendars {
     margin-left: -15px;
     margin-right: -10px;
     display: flex;
     justify-content: space-between;
     font-size: 90%;
+    height: 35px;
+    align-items: center;
 }
 
-.my-calendars p {
+.my-calendars p, .other-calendars p {
     margin-left: 15px;
 }
 
-.my-calendars i {
+.my-calendars i, .other-calendars i {
     margin-right: 20px;
 }
 
-.my-calendars:hover {
-    background: grey;
+.my-calendars:hover, .other-calendars:hover {
+    background: #d3d1d1;
+    cursor: pointer;
+}
+
+.mine li {
+    margin-bottom: 10px;
 }
 
 .other-agendas {
     padding-top: 10px;
+}
+
+.mine, .other {
+    display: none; 
+    color: black; 
 }

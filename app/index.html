@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="assets/css/bulma.min.css">
         <link rel="stylesheet" href="assets/css/all.css">
         <link rel="stylesheet" href="assets/css/fullcalendar.css">
+        <link rel="stylesheet" href="assets/css/bulma-checkradio.min.css">
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/moment.min.js"></script>
         <script src="assets/js/fullcalendar.js"></script>
@@ -30,10 +31,33 @@
                   <p>My calendars</p>
                   <i class="fas fa-angle-down"></i>
                 </div>
+                <ul class="mine">
+                  <li><div class="field">
+                    <input class="is-checkradio has-background-color is-success" id="exampleCheckboxBackgroundColorSuccess" type="checkbox" name="exampleCheckboxBackgroundColorSuccess" checked="checked">
+                    <label for="exampleCheckboxBackgroundColorSuccess">MyName</label>
+                  </div></li>
+                  <li><div class="field">
+                    <input class="is-checkradio has-background-color is-warning" id="exampleCheckboxBackgroundColorWarning" type="checkbox" name="exampleCheckboxBackgroundColorWarning" checked="checked">
+                    <label for="exampleCheckboxBackgroundColorWarning">Checkbox - warning</label>
+                  </div></li>
+                  <li><div class="field">
+                    <input class="is-checkradio has-background-color is-danger" id="exampleCheckboxBackgroundColorDanger" type="checkbox" name="exampleCheckboxBackgroundColorDanger" checked="checked">
+                    <label for="exampleCheckboxBackgroundColorDanger">Checkbox - danger</label>
+                  </div></li>
+                </ul>
             </div>
 
             <div class="other-agendas">
-
+              <div class="other-calendars">
+                <p>Other calendars</p>
+                <i class="fas fa-angle-down"></i>
+              </div>
+              <ul class="other">
+                <li><div class="field">
+                  <input class="is-checkradio has-background-color is-info" id="exampleCheckboxBackgroundColorInfo" type="checkbox" name="exampleCheckboxBackgroundColorInfo" checked="checked">
+                  <label for="exampleCheckboxBackgroundColorInfo">Checkbox - info</label>
+                </div></li>
+              </ul>
             </div>
         </div>
 
