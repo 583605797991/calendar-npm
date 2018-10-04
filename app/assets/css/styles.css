@@ -1,0 +1,157 @@
+.hamburger {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 12px;
+  margin: 0 5px;
+}
+
+.hamburger:hover {
+  background-color: rgba(0,0,0,0.071);
+}
+
+.hamburger svg {
+  width: 24px;
+  height: 24px;
+}
+
+.brand-img {
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.calendar-view {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: #000 transparent transparent;
+  margin-left: 16px;
+}
+
+.left-menu {
+  display: flex;
+  flex-direction: column;
+  width: 255px;
+  border-right: #e0e0e0 1px solid;
+  height: 100vh;
+}
+
+.mini-calendar {
+  padding: 16px 19px 16px 19px;
+  border-bottom: #e0e0e0 1px solid;
+  height: 214px;
+}
+
+.mini-calendar .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mini-calendar .fc-left h2 {
+  font-size: 75%;
+}
+
+.mini-calendar .f-right {
+  align-self: flex-end !important;
+}
+
+.mini-calendar .fc-today-button{
+  display: none;
+}
+
+.mini-calendar .fc-prev-button, .mini-calendar .fc-next-button {
+  background: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.mini-calendar .fc-scroller {
+  overflow: hidden !important;
+}
+
+
+.mini-calendar .fc-basic-view .fc-body .fc-row {
+  min-height: 0 !important;
+  height: 2.1em !important;
+}
+
+.mini-calendar .fc-head-container, .mini-calendar .fc-widget-header, .mini-calendar .fc-widget-content {
+  border: none !important;
+}
+
+.mini-calendar table {
+  font-size: 10px !important;
+}
+
+.mini-calendar .fc-day-header {
+  text-align: right !important;
+}
+
+.my-agendas, .other-agendas {
+  padding: 10px 10px 0 15px;
+  color: grey;
+}
+
+.my-agendas {
+  border-bottom: #e0e0e0 1px solid;
+
+}
+
+.input {
+  border: none !important;
+  box-shadow: none !important;
+  background: #ededed !important;
+  width: 199px !important;
+}
+
+.input::placeholder {
+  font-size: 90%;
+  color: #222 !important;
+}
+
+
+.my-calendars, .other-calendars {
+  margin-left: -15px;
+  margin-right: -10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 90%;
+  height: 35px;
+  align-items: center;
+}
+
+.my-calendars i {
+  font-size: 130%;
+}
+
+.my-calendars p, .other-calendars p {
+  margin-left: 15px;
+}
+
+.my-calendars i, .other-calendars i {
+  margin-right: 20px;
+}
+
+.my-calendars:hover, .other-calendars:hover {
+  background: #d3d1d1;
+  cursor: pointer;
+}
+
+.mine li {
+  margin-bottom: 10px;
+}
+
+.other-agendas {
+  padding-top: 10px;
+}
+
+.other-calendars i {
+  font-size: 130%;
+}
+
+.mine, .other {
+  display: none; 
+  color: black; 
+}
