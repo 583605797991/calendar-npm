@@ -201,7 +201,7 @@
   cursor: pointer;
 }
 
-.mine li {
+.mine li, .other li {
   margin-bottom: 10px;
 }
 
