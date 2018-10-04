@@ -1,154 +1,161 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Google Calendar Clone</title>
-        <link rel="icon" id="favicon" type="image/x-icon" href="https://calendar.google.com/googlecalendar/images/favicon_v2014_3.ico">
-        <link rel="stylesheet" href="assets/css/bulma.min.css">
-        <link rel="stylesheet" href="assets/css/all.css">
-        <link rel="stylesheet" href="assets/css/fullcalendar.css">
-        <link rel="stylesheet" href="assets/css/bulma-checkradio.min.css">
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="stylesheet" href="assets/css/helpers.css">
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/moment.min.js"></script>
-        <script src="assets/js/fullcalendar.js"></script>
-      </head>
-    <body>
-        <nav class="navbar card" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-              <div class="navbar-item">
-                <div class="hamburger center">
-                  <svg class="is-shaded" viewBox="0 0 24 24">
-                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-                  </svg>
-                </div>
-              </div>
-              <div class="navbar-item is-paddingless">
-                <img class="brand-img" alt="" aria-hidden="true" src="https://www.gstatic.com/images/branding/product/1x/calendar_48dp.png">
-                <span class="subtitle is-5 is-shaded has-text-black">Calendar</span>
-              </div>
-            </div>
-            <div class="navbar-menu">
-              <div class="container">
-                <div class="columns center is-mobile is-marginless">
-                  <div class="column left is-8">
-                    <div class="columns is-mobile">
-                      <div class="column center is-paddingless is-narrow">
-                        <a class="button is-light is-uppercase">Today</a>
-                      </div>
-                      <div class="column center is-paddingless is-narrow">
-                        <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">&lt;</a>
-                      </div>
-                      <div class="column center is-paddingless is-narrow">
-                        <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">&gt;</a>
-                      </div>
-                      <div class="column left">
-                        <p class="is-shaded has-text-black subtitle is-5">
-                          <time>October 2018</time>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="column right">
-                    <div class="columns is-mobile">
-                      <div class="column is-narrow">
-                        <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">
-                          <i class="fas fa-search"></i>
-                        </a>
-                      </div>
-                      <div class="column is-narrow">
-                        <a class="button is-light">
-                          <span>Day</span>
-                          <span class="calendar-view"></span>
-                        </a>
-                      </div>
-                      <div class="column is-narrow">
-                        <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">
-                          <i class="fas fa-cog icon"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="columns left is-mobile is-marginless">
-                <div class="column center is-paddingless is-narrow">
-                  <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">
-                    <i class="fas fa-th"></i>
-                  </a>
-                </div>
-                <div class="column center is-narrow">
-                  <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">
-                    <i class="fas fa-bell"></i>
-                  </a>
-                </div>
-                <div class="column center is-narrow">
-                  <figure class="image is-32x32">
-                    <a>
-                      <img class="is-rounded" src="assets/images/goku.jpg" alt="">
-                    </a>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </nav>
-        <div class="left-menu">
-            <div id="mini-calendar" class="mini-calendar"></div>
 
-            <div class="my-agendas">
-                <div class="field is-grouped">
-                    <p class="control is-expanded is-marginless">
-                      <input class="input" type="text" placeholder="Add a coworker's calendar">
-                    </p>
-                    <p class="control">
-                        <a class="button is-white"><i class="fas fa-plus"></i></a>  
-                    </p>
-                </div>
-                <div class="my-calendars">
-                  <p>My calendars</p>
-                  <i class="fas fa-angle-down"></i>
-                </div>
-                <ul class="mine">
-                  <li><div class="field">
-                    <input class="is-checkradio has-background-color is-success" id="exampleCheckboxBackgroundColorSuccess" type="checkbox" name="exampleCheckboxBackgroundColorSuccess" checked="checked">
-                    <label for="exampleCheckboxBackgroundColorSuccess">MyName</label>
-                  </div></li>
-                  <li><div class="field">
-                    <input class="is-checkradio has-background-color is-warning" id="exampleCheckboxBackgroundColorWarning" type="checkbox" name="exampleCheckboxBackgroundColorWarning" checked="checked">
-                    <label for="exampleCheckboxBackgroundColorWarning">Checkbox - warning</label>
-                  </div></li>
-                  <li><div class="field">
-                    <input class="is-checkradio has-background-color is-danger" id="exampleCheckboxBackgroundColorDanger" type="checkbox" name="exampleCheckboxBackgroundColorDanger" checked="checked">
-                    <label for="exampleCheckboxBackgroundColorDanger">Checkbox - danger</label>
-                  </div></li>
-                </ul>
-            </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Calendar Clone</title>
+  <link rel="icon" id="favicon" type="image/x-icon" href="https://calendar.google.com/googlecalendar/images/favicon_v2014_3.ico">
+  <link rel="stylesheet" href="assets/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/css/all.css">
+  <link rel="stylesheet" href="assets/css/fullcalendar.css">
+  <link rel="stylesheet" href="assets/css/bulma-checkradio.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/helpers.css">
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/fullcalendar.js"></script>
+</head>
 
-            <div class="other-agendas">
-              <div class="other-calendars">
-                <p>Other calendars</p>
-                <i class="fas fa-angle-down"></i>
+<body>
+  <nav class="navbar card" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <div class="hamburger center">
+          <svg class="is-shaded" viewBox="0 0 24 24">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="navbar-item is-paddingless">
+        <img class="brand-img" alt="" aria-hidden="true" src="https://www.gstatic.com/images/branding/product/1x/calendar_48dp.png">
+        <span class="subtitle is-5 is-shaded has-text-black">Calendar</span>
+      </div>
+    </div>
+    <div class="navbar-menu">
+      <div class="container">
+        <div class="columns center is-mobile is-marginless">
+          <div class="column left is-8">
+            <div class="columns is-mobile">
+              <div class="column center is-paddingless is-narrow">
+                <a class="button is-light is-uppercase">Today</a>
               </div>
-              <ul class="other">
-                <li><div class="field">
-                  <input class="is-checkradio has-background-color is-info" id="exampleCheckboxBackgroundColorInfo" type="checkbox" name="exampleCheckboxBackgroundColorInfo" checked="checked">
-                  <label for="exampleCheckboxBackgroundColorInfo">Checkbox - info</label>
-                </div></li>
-              </ul>
+              <div class="column center is-paddingless is-narrow">
+                <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">&lt;</a>
+              </div>
+              <div class="column center is-paddingless is-narrow">
+                <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">&gt;</a>
+              </div>
+              <div class="column left">
+                <p class="is-shaded has-text-black subtitle is-5">
+                  <time>October 2018</time>
+                </p>
+              </div>
             </div>
+          </div>
+          <div class="column right">
+            <div class="columns is-mobile">
+              <div class="column is-narrow">
+                <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">
+                  <i class="fas fa-search"></i>
+                </a>
+              </div>
+              <div class="column is-narrow">
+                <a class="button is-light">
+                  <span>Day</span>
+                  <span class="calendar-view"></span>
+                </a>
+              </div>
+              <div class="column is-narrow">
+                <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">
+                  <i class="fas fa-cog icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns left is-mobile is-marginless">
+        <div class="column center is-paddingless is-narrow">
+          <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">
+            <i class="fas fa-th"></i>
+          </a>
+        </div>
+        <div class="column center is-narrow">
+          <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">
+            <i class="fas fa-bell"></i>
+          </a>
+        </div>
+        <div class="column center is-narrow">
+          <figure class="image is-32x32">
+            <a>
+              <img class="is-rounded" src="assets/images/goku.jpg" alt="">
+            </a>
+          </figure>
         </div>
       </div>
     </div>
   </nav>
-
   <section id="bottom">
     <div class="columns">
-      <div id="menu">
-        MENU
+      <div class="left-menu">
+        <div id="mini-calendar" class="mini-calendar"></div>
+
+        <div class="my-agendas">
+          <div class="field is-grouped">
+            <p class="control is-expanded is-marginless">
+              <input class="input" type="text" placeholder="Add a coworker's calendar">
+            </p>
+            <p class="control">
+              <a class="button is-white"><i class="fas fa-plus"></i></a>
+            </p>
+          </div>
+          <div class="my-calendars">
+            <p>My calendars</p>
+            <i class="fas fa-angle-down"></i>
+          </div>
+          <ul class="mine">
+            <li>
+              <div class="field">
+                <input class="is-checkradio has-background-color is-success" id="exampleCheckboxBackgroundColorSuccess" type="checkbox" name="exampleCheckboxBackgroundColorSuccess"
+                  checked="checked">
+                <label for="exampleCheckboxBackgroundColorSuccess">MyName</label>
+              </div>
+            </li>
+            <li>
+              <div class="field">
+                <input class="is-checkradio has-background-color is-warning" id="exampleCheckboxBackgroundColorWarning" type="checkbox" name="exampleCheckboxBackgroundColorWarning"
+                  checked="checked">
+                <label for="exampleCheckboxBackgroundColorWarning">Checkbox - warning</label>
+              </div>
+            </li>
+            <li>
+              <div class="field">
+                <input class="is-checkradio has-background-color is-danger" id="exampleCheckboxBackgroundColorDanger" type="checkbox" name="exampleCheckboxBackgroundColorDanger"
+                  checked="checked">
+                <label for="exampleCheckboxBackgroundColorDanger">Checkbox - danger</label>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="other-agendas">
+          <div class="other-calendars">
+            <p>Other calendars</p>
+            <i class="fas fa-angle-down"></i>
+          </div>
+          <ul class="other">
+            <li>
+              <div class="field">
+                <input class="is-checkradio has-background-color is-info" id="exampleCheckboxBackgroundColorInfo" type="checkbox" name="exampleCheckboxBackgroundColorInfo"
+                  checked="checked">
+                <label for="exampleCheckboxBackgroundColorInfo">Checkbox - info</label>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div id="calendar"></div>
+      <div class="calendar"></div>
       <div id="more">
         <div class="columns is-multiline">
           <div class="column center">
@@ -175,9 +182,7 @@
         </div>
       </div>
   </section>
-  
-  <script src="app.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 
 </html>
-
