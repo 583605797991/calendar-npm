@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Google Calendar Clone</title>
+        <link rel="icon" id="favicon" type="image/x-icon" href="https://calendar.google.com/googlecalendar/images/favicon_v2014_3.ico">
         <link rel="stylesheet" href="assets/css/bulma.min.css">
         <link rel="stylesheet" href="assets/css/all.css">
         <link rel="stylesheet" href="assets/css/fullcalendar.css">
@@ -137,7 +139,45 @@
               </ul>
             </div>
         </div>
+      </div>
+    </div>
+  </nav>
 
-        <script src="app.js"></script>
-    </body>
+  <section id="bottom">
+    <div class="columns">
+      <div id="menu">
+        MENU
+      </div>
+      <div id="calendar"></div>
+      <div id="more">
+        <div class="columns is-multiline">
+          <div class="column center">
+            <figure class="image is-32x32">
+              <button class="more-button">
+                <img class="more-icon" src="https://www.gstatic.com/companion/icon_assets/keep_2x.png">
+              </button>
+            </figure>
+          </div>
+          <div class="column center">
+            <figure class="image is-32x32">
+              <button class="more-button">
+                <img class="more-icon" src="https://www.gstatic.com/companion/icon_assets/tasks2_2x.png">
+              </button>
+            </figure>
+          </div>
+          <div class="column center">
+            <figure class="image is-32x32">
+              <button class="more-button">
+                <img class="more-icon" src="assets/images/Plus.png">
+              </button>
+            </figure>
+          </div>
+        </div>
+      </div>
+  </section>
+  
+  <script src="app.js"></script>
+</body>
+
 </html>
+
