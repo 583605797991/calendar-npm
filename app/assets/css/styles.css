@@ -205,6 +205,10 @@
   margin-bottom: 10px;
 }
 
+label {
+  font-size: 85% !important;
+}
+
 .other-agendas {
   padding-top: 10px;
 }

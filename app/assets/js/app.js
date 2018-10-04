@@ -44,10 +44,14 @@ $(() => {
 
     $(".my-calendars").on('click', () => {
         $(".mine").toggle('fast')
+        $(".my-calendars i").toggleClass("fas fa-angle-down")
+        $(".my-calendars i").toggleClass("fas fa-angle-up")
     })
 
     $(".other-calendars").on('click', () => {
         $(".other").toggle('fast')
+        $(".other-calendars i").toggleClass("fas fa-angle-down")
+        $(".other-calendars i").toggleClass("fas fa-angle-up")
     })
 
     $(() => {
