@@ -37,10 +37,11 @@
   margin-left: 10px;
 }
 
-#calendar {
+.calendar {
   width: 85%;
   overflow: hidden;
   margin-top: 15px;
+
 }
 
 #more {
@@ -53,16 +54,16 @@
   flex-direction: column;
 }
 
-.fc-toolbar {
+.calendar .fc-toolbar {
   display: none;
 }
 
-.fc-day-header{
+.calendar .fc-day-header{
   font-size: xx-large;
   font-weight: lighter;
 }
 
-.fc-axis > span {
+.calendar .fc-axis > span {
   font-size: smaller;
   margin-right: 8px;
 }
@@ -92,7 +93,7 @@
   flex-direction: column;
   width: 255px;
   border-right: #e0e0e0 1px solid;
-  height: 100vh;
+  height: 100%;
 }
 
 .mini-calendar {
