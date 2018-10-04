@@ -102,6 +102,10 @@
     align-items: center;
 }
 
+.my-calendars i {
+    font-size: 130%;
+}
+
 .my-calendars p, .other-calendars p {
     margin-left: 15px;
 }
@@ -121,6 +125,10 @@
 
 .other-agendas {
     padding-top: 10px;
+}
+
+.other-calendars i {
+    font-size: 130%;
 }
 
 .mine, .other {

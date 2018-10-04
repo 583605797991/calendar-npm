@@ -1,6 +1,6 @@
 $(() => {
 
-$('#calendar').fullCalendar({
+$('#mini-calendar').fullCalendar({
     defaultView: 'month',
     height: 200,
      columnHeaderText: function(moment) {
