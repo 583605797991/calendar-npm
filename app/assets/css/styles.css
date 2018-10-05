@@ -127,6 +127,10 @@
   box-shadow: none !important;
 }
 
+.mini-calendar .fc-icon-right-single-arrow {
+  top: 0% !important;
+}
+
 .mini-calendar .fc-scroller {
   overflow: hidden !important;
 }
@@ -156,7 +160,6 @@
 
 .my-agendas {
   border-bottom: #e0e0e0 1px solid;
-
 }
 
 .input {
@@ -170,7 +173,6 @@
   font-size: 90%;
   color: #222 !important;
 }
-
 
 .my-calendars, .other-calendars {
   margin-left: -15px;
@@ -199,8 +201,12 @@
   cursor: pointer;
 }
 
-.mine li {
+.mine li, .other li {
   margin-bottom: 10px;
+}
+
+label {
+  font-size: 85% !important;
 }
 
 .other-agendas {
@@ -212,6 +218,6 @@
 }
 
 .mine, .other {
-  display: none; 
-  color: black; 
+  display: none;
+  color: black;
 }
