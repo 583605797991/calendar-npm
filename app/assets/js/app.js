@@ -1,11 +1,12 @@
 const addCalendarField = $("#add-calendar-field");
+const calendar = $('.calendar');
 
 $('#mini-calendar').fullCalendar({
   defaultView: 'month',
   height: 200,
-  dayClick: date => $('.calendar').fullCalendar( 'gotoDate', date ),
-  columnHeaderText: function (moment) {
-    var day = moment.weekday();
+  dayClick: date => calendar.fullCalendar( 'gotoDate', date ),
+  columnHeaderText: (moment) => {
+    let day = moment.weekday();
     if (day === 0) {
       return 'S'
     } else if (day === 1) {
@@ -22,14 +23,14 @@ $('#mini-calendar').fullCalendar({
   }
 });
 
-$('#mini-calendar .fc-button-next span').click(function () {
+$('#mini-calendar .fc-button-next span').click(() => {
   let date = $("#mini-calendar").fullCalendar('getDate');
   date.setDate(date.getDate() + 1);
   console.log(date);
   $(".calendar").fullCalendar('gotoDate', date);
 });
 
-$('#mini-calendar .fc-button-prev span').click(function () {
+$('#mini-calendar .fc-button-prev span').click(() => {
   let date = $("#mini-calendar").fullCalendar('getDate');
   date.setDate(date.getDate() - 1);
   console.log(date);
@@ -60,7 +61,7 @@ $(".other-calendars").on('click', () => {
   $(".other-calendars i").toggleClass("fas fa-angle-up")
 })
 
-$('.calendar').fullCalendar({
+calendar.fullCalendar({
   defaultView: 'agendaWeek',
   contentHeight: 888,
   selectable: true,
@@ -76,9 +77,13 @@ $('.calendar').fullCalendar({
       allDay: false,
       editable: true,
     });
-    $('.calendar').fullCalendar('addEventSource', eventSource);
+    calendar.fullCalendar('addEventSource', eventSource);
   },
 
+  viewRender: (view) => {
+    let title = view.title;
+    $('#view-date').html(title);
+  }
 });
 
 const addCalendar = (calendar) => {
@@ -98,18 +103,34 @@ const addCalendar = (calendar) => {
         </li>`);
 }
 
-$('#today').click(function () {
-  $('.calendar').fullCalendar('today');
+$('#today').click(() => {
+  calendar.fullCalendar('today');
 });
 
-$('#prev').click(function () {
-  $('.calendar').fullCalendar('prev');
+$('#prev').click(() => {
+  calendar.fullCalendar('prev');
 });
 
-$('#next').click(function () {
-  $('.calendar').fullCalendar('next');
+$('#next').click(() => {
+  calendar.fullCalendar('next');
 });
 
-$('.hamburger').click(function () {
+$('.hamburger').click(() => {
   $('.left-menu').toggle("slide");
+});
+
+$('[data-toggle]').on('click', () => {
+  $(`#${$('[data-toggle]').attr('data-toggle')}`).toggleClass('actived');
+})
+
+$('#day-view').on('click', () => {
+  calendar.fullCalendar('changeView', 'agendaDay');
+});
+
+$('#week-view').on('click', () => {
+  calendar.fullCalendar('changeView', 'agendaWeek');
+});
+
+$('#month-view').on('click', () => {
+  calendar.fullCalendar('changeView', 'month');
 });
