@@ -48,7 +48,7 @@
               </div>
               <div class="column left">
                 <p class="is-shaded has-text-black subtitle is-5">
-                  <time>October 2018</time>
+                  <time id="view-date">October 2018</time>
                 </p>
               </div>
             </div>
@@ -60,11 +60,18 @@
                   <i class="fas fa-search"></i>
                 </a>
               </div>
-              <div class="column is-narrow">
+              <div class="column is-narrow dropdown" data-toggle="views">
                 <a class="button is-light">
-                  <span>Day</span>
+                  <span>Week</span>
                   <span class="calendar-view"></span>
                 </a>
+                <div id="views" class="dropdown-view">
+                  <ul>
+                    <li id="day-view">Day</li>
+                    <li id="week-view">Week</li>
+                    <li id="month-view">Month</li>
+                  </ul>
+                </div>
               </div>
               <div class="column is-narrow">
                 <a class="button is-white is-shaded is-bold has-text-weight-bold has-text-black is-rounded">
