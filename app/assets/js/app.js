@@ -85,17 +85,18 @@ calendar.fullCalendar({
   },
 
   eventClick: calEvent => {
-    alert(`
+    var input = prompt(`
     Event: ${calEvent.title}
     Event start: ${calEvent.start.format('MMMM Do YYYY, h:mm:ss a')}
     Event end: ${calEvent.end.format('MMMM Do YYYY, h:mm:ss a')}
-    `);
+    `, `${calEvent.title}`);
+    calEvent.title = input;
+    calendar.fullCalendar('updateEvent', calEvent);
     $(this).keyup((event) => {
       if (event.keyCode === 46) {
         calendar.fullCalendar('removeEvents', calEvent.id);
       }
     })
-
   },
 
   viewRender: (view) => {
