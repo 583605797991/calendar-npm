@@ -47,21 +47,11 @@ $(() => {
     $(".other-calendars i").toggleClass("fas fa-angle-up")
   })
 
-  $(() => {
-
-    $('.calendar').fullCalendar({
-      defaultView: 'agendaWeek',
-      contentHeight: 888
-    })
-
-  });
-
-  $(document).ready(function () {
-    $('.hamburger').click(function () {
-      $('.left-menu').toggle("slide");
-    });
-  });
-
+  $('.calendar').fullCalendar({
+    defaultView: 'agendaWeek',
+    contentHeight: 888
+  })
+  
   const addCalendar = (calendar) => {
     $('.other').append(`
         <li>
@@ -79,4 +69,42 @@ $(() => {
         </li>`);
   }
 
+    $(".my-calendars").on('click', () => {
+        $(".mine").toggle('fast')
+        $(".my-calendars i").toggleClass("fas fa-angle-down")
+        $(".my-calendars i").toggleClass("fas fa-angle-up")
+    })
+
+    $(".other-calendars").on('click', () => {
+        $(".other").toggle('fast')
+        $(".other-calendars i").toggleClass("fas fa-angle-down")
+        $(".other-calendars i").toggleClass("fas fa-angle-up")
+    })
+
+    $(() => {
+
+        $('.calendar').fullCalendar({
+            defaultView: 'agendaWeek',
+            contentHeight: 888
+        })
+
+    });
+
+    $('#today').click(function () {
+        $('.calendar').fullCalendar('today');
+    });
+
+    $('#prev').click(function () {
+        $('.calendar').fullCalendar('prev');
+    });
+
+    $('#next').click(function () {
+        $('.calendar').fullCalendar('next');
+    });
+
+    $('.hamburger').click(function () {
+        $('.left-menu').toggle("slide");
+    });
+
 });
+
