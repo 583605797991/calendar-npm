@@ -138,6 +138,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: grey !important;
+}
+
+.mini-calendar .fc-icon-right-single-arrow:after, .mini-calendar .fc-icon-left-single-arrow:after  {
+  top: 0% !important;
+  font-weight: normal !important;
+  font-size: 150% !important;
+  color: grey !important;
 }
 
 .mini-calendar .fc-left h2 {
@@ -166,6 +174,16 @@
 .mini-calendar .fc-basic-view .fc-body .fc-row {
   min-height: 0 !important;
   height: 2.1em !important;
+}
+
+.mini-calendar table th {
+  color: grey !important;
+}
+
+.mini-calendar .fc-day-number {
+  color: black !important;
+  font-weight: 550;
+
 }
 
 .mini-calendar .fc-head-container, .mini-calendar .fc-widget-header, .mini-calendar .fc-widget-content {
