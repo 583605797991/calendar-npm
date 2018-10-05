@@ -68,6 +68,7 @@ calendar.fullCalendar({
   contentHeight: 888,
   selectable: true,
   editable: false,
+  columnHeaderFormat: 'ddd D',
 
   select: (start, end) => {
     let events = [];
