@@ -95,6 +95,10 @@
   margin-right: 8px;
 }
 
+.calendar .fc-event {
+  background-color: rgb(3, 155, 229) !important;
+}
+
 .more-icon {
   width: 20px;
   height: 20px;
