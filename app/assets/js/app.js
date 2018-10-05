@@ -80,6 +80,14 @@ calendar.fullCalendar({
     calendar.fullCalendar('addEventSource', eventSource);
   },
 
+  eventClick: (calEvent, jsEvent, view) => {
+    alert('Event: ' + calEvent.title);
+    alert('Event start: ' + calEvent.start.format('MMMM Do YYYY, h:mm:ss a'));
+    alert('Event end: ' + calEvent.end.format('MMMM Do YYYY, h:mm:ss a'));
+    $(this).css('border-color', 'red');
+
+  },
+
   viewRender: (view) => {
     let title = view.title;
     $('#view-date').html(title);
