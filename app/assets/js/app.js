@@ -74,6 +74,7 @@ calendar.fullCalendar({
     const eventSource = { events };
     events.push({
       title: prompt('Type a name'),
+      id: Math.floor((Math.random() * 10000) + 1),
       start,
       end,
       allDay: false,
@@ -82,11 +83,17 @@ calendar.fullCalendar({
     calendar.fullCalendar('addEventSource', eventSource);
   },
 
-  eventClick: (calEvent, jsEvent, view) => {
-    alert('Event: ' + calEvent.title);
-    alert('Event start: ' + calEvent.start.format('MMMM Do YYYY, h:mm:ss a'));
-    alert('Event end: ' + calEvent.end.format('MMMM Do YYYY, h:mm:ss a'));
-    $(this).css('border-color', 'red');
+  eventClick: calEvent => {
+    alert(`
+    Event: ${calEvent.title}
+    Event start: ${calEvent.start.format('MMMM Do YYYY, h:mm:ss a')}
+    Event end: ${calEvent.end.format('MMMM Do YYYY, h:mm:ss a')}
+    `);
+    $(this).keyup((event) => {
+      if (event.keyCode === 46) {
+        calendar.fullCalendar('removeEvents', calEvent.id);
+      }
+    })
 
   },
 
