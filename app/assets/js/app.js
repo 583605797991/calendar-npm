@@ -8,32 +8,41 @@ $('#mini-calendar').fullCalendar({
   height: 200,
   dayClick: date => calendar.fullCalendar('gotoDate', date),
   columnHeaderText: (moment) => {
-    let day = moment.weekday();
-    if (day === 0) {
-      return 'S'
-    } else if (day === 1) {
-      return 'M'
-    } else if (day === 2 || day === 4) {
-      return 'T'
-    } else if (day === 3) {
-      return 'W'
-    } else if (day === 5) {
-      return 'F'
-    } else {
-      return 'S'
+    const day = moment.weekday();
+    let dayLetter = 'a';
+    switch (day) {
+      case 0:
+        dayLetter = 'S';
+        break;
+      case 1:
+        dayLetter = 'M';
+        break;
+      case 2:
+      case 4:
+        dayLetter = 'T';
+        break;
+      case 3:
+        dayLetter = 'W';
+        break;
+      case 5:
+        dayLetter = 'F';
+        break;
+      default:
+        dayLetter = 'S';
     }
+    return dayLetter;
   }
 });
 
 $('#mini-calendar .fc-button-next span').click(() => {
-  let date = $("#mini-calendar").fullCalendar('getDate');
+  const date = $("#mini-calendar").fullCalendar('getDate');
   date.setDate(date.getDate() + 1);
   console.log(date);
   $(".calendar").fullCalendar('gotoDate', date);
 });
 
 $('#mini-calendar .fc-button-prev span').click(() => {
-  let date = $("#mini-calendar").fullCalendar('getDate');
+  const date = $("#mini-calendar").fullCalendar('getDate');
   date.setDate(date.getDate() - 1);
   console.log(date);
   $(".calendar").fullCalendar('gotoDate', date);
@@ -71,7 +80,7 @@ calendar.fullCalendar({
   columnHeaderFormat: 'ddd D',
 
   select: (start, end) => {
-    let events = [];
+    const events = [];
     const eventSource = { events };
     events.push({
       title: prompt('Type a name'),
@@ -89,7 +98,7 @@ calendar.fullCalendar({
     Event: ${calEvent.title}
     Event start: ${calEvent.start.format('MMMM Do YYYY, h:mm:ss a')}
     Event end: ${calEvent.end.format('MMMM Do YYYY, h:mm:ss a')}
-    `, `${calEvent.title}`);
+    `, calEvent.title);
     calEvent.title = input;
     calendar.fullCalendar('updateEvent', calEvent);
     $(this).keyup((event) => {
@@ -100,8 +109,7 @@ calendar.fullCalendar({
   },
 
   viewRender: (view) => {
-    let title = view.title;
-    $('#view-date').html(title);
+    $('#view-date').html(view.title);
   }
 });
 
