@@ -1,10 +1,12 @@
 const addCalendarField = $("#add-calendar-field");
 const calendar = $('.calendar');
+const currentView = $('#current-view');
+
 
 $('#mini-calendar').fullCalendar({
   defaultView: 'month',
   height: 200,
-  dayClick: date => calendar.fullCalendar( 'gotoDate', date ),
+  dayClick: date => calendar.fullCalendar('gotoDate', date),
   columnHeaderText: (moment) => {
     let day = moment.weekday();
     if (day === 0) {
@@ -132,13 +134,16 @@ $('[data-toggle]').on('click', () => {
 })
 
 $('#day-view').on('click', () => {
+  currentView.html($('#day-view').html())
   calendar.fullCalendar('changeView', 'agendaDay');
 });
 
 $('#week-view').on('click', () => {
+  currentView.html($('#week-view').html())
   calendar.fullCalendar('changeView', 'agendaWeek');
 });
 
 $('#month-view').on('click', () => {
+  currentView.html($('#month-view').html())
   calendar.fullCalendar('changeView', 'month');
 });
