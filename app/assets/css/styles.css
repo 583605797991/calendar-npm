@@ -149,6 +149,14 @@
   text-align: right !important;
 }
 
+.mini-calendar .fc-day-top {
+  cursor: pointer;
+}
+
+.mini-calendar .fc-day-top:hover {
+  background-color: rgba(0,0,0,0.071) !important;
+}
+
 .my-agendas, .other-agendas {
   padding: 10px 10px 0 15px;
   color: grey;
@@ -212,6 +220,6 @@
 }
 
 .mine, .other {
-  display: none; 
-  color: black; 
+  display: none;
+  color: black;
 }

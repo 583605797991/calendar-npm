@@ -3,6 +3,7 @@ const addCalendarField = $("#add-calendar-field");
 $('#mini-calendar').fullCalendar({
   defaultView: 'month',
   height: 200,
+  dayClick: date => $('.calendar').fullCalendar( 'gotoDate', date ),
   columnHeaderText: function (moment) {
     var day = moment.weekday();
     if (day === 0) {
@@ -19,6 +20,20 @@ $('#mini-calendar').fullCalendar({
       return 'S'
     }
   }
+});
+
+$('#mini-calendar .fc-button-next span').click(function () {
+  let date = $("#mini-calendar").fullCalendar('getDate');
+  date.setDate(date.getDate() + 1);
+  console.log(date);
+  $(".calendar").fullCalendar('gotoDate', date);
+});
+
+$('#mini-calendar .fc-button-prev span').click(function () {
+  let date = $("#mini-calendar").fullCalendar('getDate');
+  date.setDate(date.getDate() - 1);
+  console.log(date);
+  $(".calendar").fullCalendar('gotoDate', date);
 });
 
 addCalendarField.on('keyup', (event) => {
