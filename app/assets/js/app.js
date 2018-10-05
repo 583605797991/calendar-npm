@@ -4,7 +4,7 @@ $(() => {
         defaultView: 'month',
         height: 200,
         columnHeaderText: function (moment) {
-          var day = moment.weekday();
+            var day = moment.weekday();
             if (day === 0) {
                 return 'S'
             } else if (day === 1) {
@@ -21,11 +21,11 @@ $(() => {
         }
     });
 
-    $("input[class=input]").on('keyup', function(event) {
-      if (event.keyCode === 13) {
-        var textVal = $(".input").val();
-        `testeasdka sodkas dçasm kdnasç ndçaksn dçaksnd ${textVal}`
-        $('.other').append(`
+    $("input[class=input]").on('keyup', function (event) {
+        if (event.keyCode === 13) {
+            var textVal = $(".input").val();
+            `testeasdka sodkas dçasm kdnasç ndçaksn dçaksnd ${textVal}`
+            $('.other').append(`
         <li>
           <div class="field">
             <input
@@ -39,7 +39,7 @@ $(() => {
             </label>
           </div>
         </li>`)
-      }
+        }
     });
 
     $(".my-calendars").on('click', () => {
@@ -63,10 +63,21 @@ $(() => {
 
     });
 
-    $(document).ready(function () {
-        $('.hamburger').click(function () {
-            $('.left-menu').toggle("slide");
-        });
+    $('#today').click(function () {
+        $('.calendar').fullCalendar('today');
+    });
+
+    $('#prev').click(function () {
+        $('.calendar').fullCalendar('prev');
+    });
+
+    $('#next').click(function () {
+        $('.calendar').fullCalendar('next');
+    });
+
+    $('.hamburger').click(function () {
+        $('.left-menu').toggle("slide");
     });
 
 });
+
